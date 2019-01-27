@@ -19,11 +19,11 @@ function addItem() {
 //function to toggle item's checkmark status
 function toggleItem() {
     
-    let checkButton = $('.shopping-item-toggle');
+    //let checkButton = $('.shopping-item-toggle');
     //let checkText = $('span.shopping-item');
 
     //no need for a for loop
-    checkButton.click(toggleChecked);
+    $('ul').on('click', 'button.shopping-item-toggle', toggleChecked);
 
     function toggleChecked() {
         //class doesn't use . in toggleClass
