@@ -19,10 +19,7 @@ function addItem() {
 //function to toggle item's checkmark status
 function toggleItem() {
     
-    //let checkButton = $('.shopping-item-toggle');
-    //let checkText = $('span.shopping-item');
-
-    //no need for a for loop
+    //no need for a for loop, needs event delegation for new items
     $('ul').on('click', 'button.shopping-item-toggle', toggleChecked);
 
     function toggleChecked() {
@@ -33,7 +30,11 @@ function toggleItem() {
 
 //function to delete item
 function deleteItem() {
+    $('ul').on('click', 'button.shopping-item-delete', deleteItem);
 
+    function deleteItem() {
+        $(this).parent().parent().remove();
+    }
 }
 
 $(addItem);
