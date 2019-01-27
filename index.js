@@ -10,9 +10,6 @@ function addItem() {
         if (groceryItem) {
             $('.shopping-list').prepend(newList);
         }
-        else {
-            return;
-        }
     })
 }
 
