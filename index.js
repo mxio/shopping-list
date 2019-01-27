@@ -26,7 +26,7 @@ function toggleItem() {
 }
 
 //function to delete item
-function deleteItem() {
+function deleteItems() {
     $('ul').on('click', 'button.shopping-item-delete', deleteItem);
 
     function deleteItem() {
@@ -36,4 +36,4 @@ function deleteItem() {
 
 $(addItem);
 $(toggleItem);
-$(deleteItem);
+$(deleteItems);
