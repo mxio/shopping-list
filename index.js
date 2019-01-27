@@ -19,12 +19,16 @@ function addItem() {
 //function to toggle item's checkmark status
 function toggleItem() {
     
-    $().on('click', function(event) {
-        //.shopping-item__checked
-        if ($('span').text() === "check") {
-            $(this).toggle('.shopping-item__checked');
-        }
-    })
+    let checkButton = $('.shopping-item-toggle');
+    //let checkText = $('span.shopping-item');
+
+    //no need for a for loop
+    checkButton.click(toggleChecked);
+
+    function toggleChecked() {
+        //class doesn't use . in toggleClass
+        $(this).parent().prev().toggleClass('shopping-item__checked');
+    }
 }
 
 //function to delete item
